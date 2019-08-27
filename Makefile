@@ -1,4 +1,11 @@
-make
+install:
 make install
+
+make start:
 npx babel-node src/bin/brain-games.js
+
+publish:
 publish --dry-run
+
+lint:
+npx eslint .
