@@ -1,3 +1,9 @@
-import { name, sum }  from '../index.js';
-console.log(`Hello, ${name}!`);
-sum();
+#!/usr/bin/env node
+
+import { welcome, name } from '..';
+import calc from '../games/calc';
+
+welcome();
+name();
+calc();
+console.log('');

@@ -1,4 +1,9 @@
-import { name, count }  from '../index.js';
-console.log(`Hello, ${name}!`);
-console.log('Answer "yes" if number even otherwise answer "no".');
-count(0);
+#!/usr/bin/env node
+
+import { welcome, name } from '..';
+import even from '../games/even';
+
+welcome();
+name();
+even();
+console.log('');

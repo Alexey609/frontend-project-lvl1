@@ -1,25 +1,16 @@
 {
   "name": "first_pr",
   "version": "1.0.0",
-  "description": "\"\"",
+  "description": "simple games",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+        "brain-even": "dist/bin/brain-even.js",
+        "brain-calc": "dist/bin/brain-calc.js",
+        "brain-gcd": "dist/bin/brain-gcd.js",
+        "brain-progression": "dist/bin/brain-progression.js",
+        "brain-prime": "dist/bin/brain-prime.js"
   },
   "main": "babel.config.js",
-  "dependencies": {
-    "babel-cli": "^6.26.0",
-    "readline-sync": "^1.4.10"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/node": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.2.2",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-babel": "^5.3.0"
-  },
+  
   "scripts": {
     "test": "\"echo \\\"Error: no test specified\\\" && exit 1\"",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
@@ -32,7 +23,7 @@
     "type": "git",
     "url": "git+https://github.com/Alexey609/frontend-project-lvl1.git"
   },
-  "author": "\"\"",
+  "author": "Alexey",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Alexey609/frontend-project-lvl1/issues"

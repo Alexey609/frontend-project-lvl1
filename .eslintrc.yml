@@ -7,11 +7,8 @@
   env:
     example/custom: true
     node: true
-    jest: true
-    
-
+  
   parser: babel-eslint
-
 
   plugins:
     - 'airbnb-base'

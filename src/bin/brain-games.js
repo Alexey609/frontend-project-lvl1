@@ -1,4 +1,4 @@
-import { name }  from '../index.js';
+import { name }  from '../index';
 console.log(`Hello, ${name}!`);
 
 

@@ -1,3 +1,9 @@
-import { name, progression }  from '../index.js';
-console.log(`Hello, ${name}!`);
+#!/usr/bin/env node
+
+import { welcome, name } from '..';
+import progression from '../games/progression';
+
+welcome();
+name();
 progression();
+console.log('');
