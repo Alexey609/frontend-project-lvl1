@@ -3,6 +3,6 @@
 
 [![Build Status](https://travis-ci.com/Alexey609/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/Alexey609/frontend-project-lvl1)
 
-<a href="https://codeclimate.com/https://codeclimate.com/oss/dashboard /></a>
+<a href=https://codeclimate.com/github/Alexey609/frontend-project-lvl1 /></a>
 
 
