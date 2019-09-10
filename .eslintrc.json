@@ -3,10 +3,5 @@
         "es6": true,
         "node": true
     },
-    "extends": "eslint:recommended",
-    "rules": {
-         "semi": ["error", "always"],
-        "quotes": ["error", "double"],
-         "extends": "eslint:recommended"
-    }
+    "extends": "eslint:recommended"
 }
