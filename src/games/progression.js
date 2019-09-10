@@ -48,7 +48,7 @@ const progression = () => {
       return true;
     };
 
-    const questNum = progress.slice(indexOfNum(index), indexOfNum(index) + 2);
+    const result = progress.slice(indexOfNum(index), indexOfNum(index) + 2);
 
     const questProgress = (str) => {
       if (indexOfNum(index) !== 0) {
@@ -59,11 +59,11 @@ const progression = () => {
     console.log(`Question: ${questProgress(progress)}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (questNum === answer) {
+    if (result === answer) {
       console.log('Correct!');
       return n + count(n + 1);
     }
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${questNum}'.`);
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
     console.log(`Let's try again, ${name}!`);
     return false;
   };
