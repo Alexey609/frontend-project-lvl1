@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import name from '..';
+import { name } from '../index.js';
 
 const gcd = () => {
   console.log('Find the greatest common divisor of given numbers.');
