@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import name from '..';
+import { name } from '../index.js';
 
 const calc = () => {
   console.log('What is the result of the expression?');
