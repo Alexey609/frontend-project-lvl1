@@ -1,8 +1,8 @@
 {
   "name": "first_pr",
   "version": "1.0.0",
-  "description": "simple games",
-  "keywords": "study" "simple games",
+  "description": "simple games]",
+   "keywords": ["study", "simple games"], 
   "bin": {
         "brain-even": "dist/bin/brain-even.js",
         "brain-calc": "dist/bin/brain-calc.js",
@@ -23,7 +23,12 @@
     "url": "git+https://github.com/Alexey609/frontend-project-lvl1.git"
   },
   "author": "Alexey",
-    "devDependencies": {
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexey609/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/Alexey609/frontend-project-lvl1#readme",
+ "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
@@ -50,10 +55,5 @@
     "flow-typed": "^2.6.1",
     "gulp-babel": "^8.0.0",
     "readline-sync": "^1.4.10"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Alexey609/frontend-project-lvl1/issues"
-  },
-  "homepage": "https://github.com/Alexey609/frontend-project-lvl1#readme"
+}
 }
