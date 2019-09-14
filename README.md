@@ -3,6 +3,6 @@
 
 [![Build Status](https://travis-ci.com/Alexey609/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/Alexey609/frontend-project-lvl1)
 
-
+[![Build Status](https://travis-ci.com/Alexey609/github.io.svg?branch=master)](https://travis-ci.com/Alexey609/github.io)
 
 
