@@ -25,4 +25,3 @@ const engine = (fun1, fun2) => {
 };
 
 export default engine;
-
