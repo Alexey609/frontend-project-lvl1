@@ -1,42 +1,34 @@
-import readlineSync from 'readline-sync';
-import { name } from '../index.js';
+import engine from '..';
 
 const progression = () => {
-  console.log('What number is missing in the progression?');
-  console.log('');
-  const count = (n) => {
-    if (n === 3) {
-      console.log(`Congratulations, ${name}!`);
-      return true;
-    }
-    const genProgress = () => {
-      const step = 3;
-      const iter = (i, acc) => {
-        if (i === 10) {
-          return acc;
-        }
-        return iter(i + 1, `${acc} ${13 + step * i}`);
-      };
-      return iter(1, 13);
+  const gameDesciption = () => {
+    console.log('What number is missing in the progression?\n');
+  };
+
+  const makeProgression = () => {
+    const step = 3;
+    const iter = (i, acc) => {
+      if (i === 10) {
+        return acc;
+      }
+      return iter(i + 1, `${acc} ${13 + step * i}`);
     };
+    return iter(1, 13);
+  };
 
-    const progress = genProgress();
-
-    console.log(progress);
-
-    const randomIndex = (min = 0, max = (progress.length - 1)) => Math.floor(Math.random()
+  const getData = () => {
+    const getProgression = makeProgression();
+    const randomIndex = (min = 0, max = (getProgression.length - 1)) => Math.floor(Math.random()
     * (max - min)) + min;
 
-    const index = randomIndex();
-
-    const indexOfNum = (i) => {
-      if (progress[i] === ' ') {
-        return index - 2;
+    const numIndex = (i) => {
+      if (getProgression[i] === ' ') {
+        return i - 2;
       }
-      if (progress[i] !== ' ' && progress[i + 1] === ' ') {
+      if (getProgression[i] !== ' ' && getProgression[i + 1] === ' ') {
         return i - 1;
       }
-      if (progress[i] !== ' ' && progress[i - 1] === ' ') {
+      if (getProgression[i] !== ' ' && getProgression[i - 1] === ' ') {
         return i;
       }
       if (i === 0) {
@@ -48,27 +40,20 @@ const progression = () => {
       return true;
     };
 
-    const result = progress.slice(indexOfNum(index), indexOfNum(index) + 2);
+    const index = randomIndex();
 
-    const questProgress = (str) => {
-      if (indexOfNum(index) !== 0) {
-        return `${str.substring(0, indexOfNum(index))}..${str.substring(indexOfNum(index) + 2, str.lebngth)}`;
+    const correctAnswer = getProgression.slice(numIndex(index), numIndex(index) + 2);
+
+    const getQuestionProgression = (str) => {
+      if (numIndex(index) !== 0) {
+        return `${str.substring(0, numIndex(index))}..${str.substring(numIndex(index) + 2, str.length)}`;
       }
-      return `..${str.substring(indexOfNum(index) + 2, str.length)}`;
+      return `..${str.substring(numIndex(index) + 2, str.length)}`;
     };
-    console.log(`Question: ${questProgress(progress)}`);
-    const answer = readlineSync.question('Your answer: ');
-
-    if (result === answer) {
-      console.log('Correct!');
-      return n + count(n + 1);
-    }
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
-    console.log(`Let's try again, ${name}!`);
-    return false;
+    console.log(`Question: ${getQuestionProgression(getProgression)}`);
+    return String(correctAnswer);
   };
-  count(0);
-  console.log('');
+  engine(gameDesciption, getData);
 };
 
 export default progression;
