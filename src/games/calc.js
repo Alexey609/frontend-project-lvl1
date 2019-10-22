@@ -1,50 +1,31 @@
-import readlineSync from 'readline-sync';
-import { name } from '../index.js';
+mport engine from '..';
+import randomNumber from './randomnumber';
 
 const calc = () => {
-  console.log('What is the result of the expression?');
-  console.log('');
-  const count = (n) => {
-    if (n === 3) {
-      console.log(`Congratulations, ${name}!`);
-      return true;
-    }
-    const num1 = Math.round(100 * Math.random());
-    const num2 = Math.round(100 * Math.random());
-    const str = '+-*';
-    const sign = str[Math.floor(Math.random() * 3)];
-    console.log(`Question: ${num1} ${sign} ${num2}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (sign === '+') {
-      if ((num1 + num2) === parseInt(answer, 10)) {
-        console.log('Correct!');
-        return n + count(n + 1);
-      }
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${num1 + num2}'.`);
-      console.log(`Let's try again, ${name}!`);
-      return false;
-    }
-    if (sign === '-') {
-      if ((num1 - num2) === parseInt(answer, 10)) {
-        console.log('Correct!');
-        return n + count(n + 1);
-      }
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${num1 - num2}'.`);
-      console.log(`Let's try again, ${name}!`);
-      return false;
-    }
-    if (sign === '*') {
-      if ((num1 * num2) === parseInt(answer, 10)) {
-        console.log('Correct!');
-        return n + count(n + 1);
-      }
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${num1 * num2}'.`);
-      console.log(`Let's try again, ${name}!`);
-      return false;
-    }
-    return true;
+  const gameDesciption = () => {
+    console.log('What is the result of the expression?\n');
   };
-  count(0);
+
+  const getData = () => {
+    const num1 = randomNumber();
+    const num2 = randomNumber();
+    const listOfOperations = '+-*';
+    const operation = listOfOperations[Math.floor(Math.random() * listOfOperations.length)];
+    switch (operation) {
+      case '+':
+        console.log(`Question: ${num1} ${operation} ${num2}`);
+        return String(num1 + num2);
+
+      case '-':
+        console.log(`Question: ${num1} ${operation} ${num2}`);
+        return String(num1 - num2);
+
+      default:
+        console.log(`Question: ${num1} ${operation} ${num2}`);
+        return String(num1 * num2);
+    }
+  };
+  engine(gameDesciption, getData);
 };
 
 export default calc;
