@@ -1,4 +1,4 @@
-import  progression from '../games/progression';
+import progression from '../games/progression';
 
 progression();
 console.log('');
