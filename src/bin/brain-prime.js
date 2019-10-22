@@ -1,4 +1,4 @@
-mport prime from '../games/prime';
+import prime from '../games/prime';
 
 prime();
 console.log('');
