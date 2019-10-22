@@ -1,4 +1,4 @@
-mport engine from '..';
+import engine from '..';
 import randomNumber from './randomnumber';
 
 const calc = () => {
