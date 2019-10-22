@@ -1,41 +1,31 @@
-import readlineSync from 'readline-sync';
-import { name } from '../index.js';
+import engine from '..';
+import randomNumber from './randomnumber';
 
 const gcd = () => {
-  console.log('Find the greatest common divisor of given numbers.');
-  console.log('');
-  const count = (n) => {
-    if (n === 3) {
-      console.log(`Congratulations, ${name}!`);
-      return true;
-    }
-    const num1 = Math.round(100 * Math.random());
-    const num2 = Math.round(100 * Math.random());
-    console.log(`Question: ${num1} ${num2}`);
-    const answer = readlineSync.question('Your answer: ');
+  const gameDesciption = () => {
+    console.log('Find the greatest common divisor of given numbers.\n');
+  };
 
-    const maxDivisor = (a, b) => {
-      if (a === b) {
+  const getData = () => {
+    const getMaxDivisor = (a, b) => {
+      if (a === b && a !== 0 && b !== 0) {
         return a;
       }
-      while (a !== b) {
+      while (a !== b && a !== 0 && b !== 0) {
         if (a > b) {
-          return maxDivisor(a - b, b);
+          return getMaxDivisor(a - b, b);
         }
-        return maxDivisor(a, b - a);
+        return getMaxDivisor(a, b - a);
       }
-      return true;
+      return a === 0 ? b : getMaxDivisor(b, a);
     };
-
-    if (maxDivisor(num1, num2) === parseInt(answer, 10)) {
-      console.log('Correct!');
-      return n + count(n + 1);
-    }
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${maxDivisor(num1, num2)}'.`);
-    console.log(`Let's try again, ${name}!`);
-    return false;
+    const num1 = randomNumber();
+    const num2 = randomNumber();
+    console.log(`Question: ${num1} ${num2}`);
+    return String(getMaxDivisor(num1, num2));
   };
-  count(0);
+  engine(gameDesciption, getData);
 };
 
 export default gcd;
+
