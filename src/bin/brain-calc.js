@@ -2,4 +2,3 @@
 import calc from '../games/calc';
 
 calc();
-console.log('');
