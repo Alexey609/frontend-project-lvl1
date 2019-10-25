@@ -2,4 +2,3 @@
 import gcd from '../games/gcd';
 
 gcd();
-console.log('');
