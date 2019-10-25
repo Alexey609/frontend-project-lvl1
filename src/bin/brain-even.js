@@ -2,4 +2,3 @@
 import even from '../games/even';
 
 even();
-console.log('');
