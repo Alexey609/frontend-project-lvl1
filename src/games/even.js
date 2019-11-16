@@ -14,8 +14,6 @@ const even = () => {
     }
     console.log(`Question: ${num}`);
     return 'no';
- 
-  
   };
 
   const check = () => {
