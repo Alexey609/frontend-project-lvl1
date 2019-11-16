@@ -1,4 +1,6 @@
 import readlineSync from 'readline-sync';
+
+
 const engine = (fun1, fun2) => {
   console.log('Welcome to the Brain Games!');
   fun1();
