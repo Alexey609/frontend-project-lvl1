@@ -14,8 +14,28 @@ const even = () => {
     }
     console.log(`Question: ${num}`);
     return 'no';
+ 
+  
   };
-  engine(gameDesciption, getData);
+
+  const check = () => {
+    if ((num % 2 === 0 && answer === 'yes') || (num % 2 !== 0 && answer === 'no')) {
+      console.log('Correct!');
+      return true;
+    }
+    if (num % 2 === 0 && answer !== 'yes') {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.`);
+      console.log(`Let's try again, ${name}!`);
+      return false;
+    }
+    if (num % 2 !== 0 && answer !== 'no') {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.`);
+      console.log(`Let's try again, ${name}!`);
+      return false;
+    }
+    return true;
+  };
+  engine(gameDesciption, getData, check);
 };
 
 export default even;
