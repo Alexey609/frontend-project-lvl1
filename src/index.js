@@ -1,9 +1,6 @@
 import readlineSync from 'readline-sync';
-import gameDesciption from './games/even';
-
 const engine = (fun1, fun2) => {
   console.log('Welcome to the Brain Games!');
-  console.log(gameDesciption);
   fun1();
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);
