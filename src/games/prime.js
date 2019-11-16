@@ -6,7 +6,7 @@ const prime = () => {
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".\n');
   };
 
-  const checkNum = (a) => {
+  const question = (a) => {
     for (let i = 2; i < a; i += 1) {
       if (a % i === 0) {
         return false;
@@ -17,7 +17,7 @@ const prime = () => {
 
   const getData = () => {
     const num = randomNumber();
-    if (checkNum(num) === true && num > 1) {
+    if (question(num) === true && num > 1) {
       console.log(`Question: ${num}`);
       return 'yes';
     }
