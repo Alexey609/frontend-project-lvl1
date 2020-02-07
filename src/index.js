@@ -1,9 +1,9 @@
 import readlineSync from 'readline-sync';
 
-
-const engine = (fun1, fun2) => {
+const engine = (gameDesciption, fun2) => {
   console.log('Welcome to the Brain Games!');
-  fun1();
+  console.log(gameDesciption);  
+  
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);
   const count = (n) => {
