@@ -3,7 +3,6 @@ import randomNumber from './randomnumber';
 
 const prime = () => {
   const gameDesciption = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
-  
   const question = (a) => {
     for (let i = 2; i < a; i += 1) {
       if (a % i === 0) {
