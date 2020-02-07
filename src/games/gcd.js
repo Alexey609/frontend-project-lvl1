@@ -2,10 +2,8 @@ import engine from '..';
 import randomNumber from './randomnumber';
 
 const gcd = () => {
-  const gameDesciption = () => {
-    console.log('Find the greatest common divisor of given numbers.\n');
-  };
-
+  const gameDesciption = 'Find the greatest common divisor of given numbers.\n';
+  
   const getData = () => {
     const getMaxDivisor = (a, b) => {
       if (a === b && a !== 0 && b !== 0) {
