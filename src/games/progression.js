@@ -2,7 +2,6 @@ import engine from '..';
 
 const progression = () => {
   const gameDesciption = 'What number is missing in the progression?\n';
-  
   const makeProgression = () => {
     const step = 3;
     const iter = (i, acc) => {
