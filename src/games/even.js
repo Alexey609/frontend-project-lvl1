@@ -1,14 +1,14 @@
 import engine from '..';
 import randomNumber from './randomnumber';
+import checkNum from './checknum';
 
 const even = () => {
-  const gameDesciption = () => {
-    console.log('Answer "yes" if number even otherwise answer "no".\n');
-  };
+  const gameDesciption = 'Answer "yes" if number even otherwise answer "no".\n';
+  
 
   const getData = () => {
     const num = randomNumber();
-    if (num % 2 === 0) {
+    if ((checkNum(num)) === true ) {
       console.log(`Question: ${num}`);
       return 'yes';
     }
