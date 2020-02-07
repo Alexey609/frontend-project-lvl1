@@ -2,8 +2,7 @@ import readlineSync from 'readline-sync';
 
 const engine = (gameDesciption, fun2) => {
   console.log('Welcome to the Brain Games!');
-  console.log(gameDesciption);  
-  
+  console.log(gameDesciption);
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);
   const count = (n) => {
