@@ -3,7 +3,6 @@ import randomNumber from './randomnumber';
 
 const calc = () => {
   const gameDesciption = 'What is the result of the expression?\n';
-  
   const getData = () => {
     const num1 = randomNumber();
     const num2 = randomNumber();
