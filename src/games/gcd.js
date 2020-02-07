@@ -3,7 +3,6 @@ import randomNumber from './randomnumber';
 
 const gcd = () => {
   const gameDesciption = 'Find the greatest common divisor of given numbers.\n';
-  
   const getData = () => {
     const getMaxDivisor = (a, b) => {
       if (a === b && a !== 0 && b !== 0) {
