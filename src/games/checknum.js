@@ -3,8 +3,7 @@ const checkNum = (num) => {
     return true;
   } else {
     return false;
-   } 
-  }
+   }
 };
 
 export default checkNum;
