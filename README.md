@@ -14,3 +14,11 @@ https://asciinema.org/a/lZ3U4SXFPimW3e7RAVMR4KiX7
 https://asciinema.org/a/HAyZNNnfqM0vVpMlkd9kZ4g6X
 
 https://asciinema.org/a/oyDy2b5dzQ1DSG6A3NcetWoMT
+
+https://asciinema.org/a/pc7KOSGhD4RyAAoxoIzJ5T6T6
+
+https://asciinema.org/a/z2s9KsAXUoC4UZogL9GrUOAKw
+
+https://asciinema.org/a/Tzx6RvwtrlR85M5f1gN6hbhGY
+
+https://asciinema.org/a/4ENtni9SDubsoU34wu4xsqrow
