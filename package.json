@@ -1,7 +1,7 @@
 {
   "name": "first_pr",
   "version": "1.0.0",
-  "description": "simple games]",
+  "description": "simple games",
    "keywords": ["study", "simple games"], 
   "bin": {
         "brain-even": "dist/bin/brain-even.js",
