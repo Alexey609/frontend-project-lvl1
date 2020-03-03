@@ -1,27 +1,27 @@
-import engine from '..';
-import randomNumber from './randomnumber';
+import { generateRandomNumber } from '../utils';
+import makeGame from '..';
 
-const prime = () => {
-  const gameDesciption = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
-  const question = (a) => {
-    for (let i = 2; i < a; i += 1) {
-      if (a % i === 0) {
-        return false;
-      }
-    }
-    return true;
-  };
+const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  const getData = () => {
-    const num = randomNumber();
-    if (question(num) === true && num > 1) {
-      console.log(`Question: ${num}`);
-      return 'yes';
-    }
-    console.log(`Question: ${num}`);
-    return 'no';
-  };
-  engine(gameDesciption, getData);
+const isPrime = (value) => {
+  if (value % 2 === 0 || value < 2) {
+    return false;
+  }
+
+  let divider = 1;
+  const upperBorder = Math.sqrt(value);
+
+  for (let i = 3; i < upperBorder; i += 2) {
+    divider = value % i === 0 ? i : divider;
+  }
+
+  return divider === 1;
 };
 
-export default prime;
+const makeRound = () => {
+  const question = generateRandomNumber(1, 1000);
+  const answer = isPrime(question) ? 'yes' : 'no';
+  return { question, answer };
+};
+
+export default () => makeGame(rule, makeRound);
