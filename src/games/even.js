@@ -1,19 +1,14 @@
-import engine from '..';
-import randomNumber from './randomnumber';
-import checkNum from './checknum';
+import { generateRandomNumber } from '../utils';
+import makeGame from '..';
 
-const even = () => {
-  const gameDesciption = 'Answer "yes" if number even otherwise answer "no".\n';
-  const getData = () => {
-    const num = randomNumber();
-    if ((checkNum(num)) === true) {
-      console.log(`Question: ${num}`);
-      return 'yes';
-    }
-    console.log(`Question: ${num}`);
-    return 'no';
-  };
-  engine(gameDesciption, getData);
+const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const isEven = (value) => value % 2 === 0;
+
+const makeRound = () => {
+  const question = generateRandomNumber(1, 100);
+  const answer = isEven(question) ? 'yes' : 'no';
+  return { question, answer };
 };
 
-export default even;
+export default () => makeGame(rule, makeRound);
