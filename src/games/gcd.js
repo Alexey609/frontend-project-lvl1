@@ -1,27 +1,18 @@
-import engine from '..';
-import randomNumber from './randomnumber';
+import { generateRandomNumber } from '../utils';
+import makeGame from '..';
 
-const gcd = () => {
-  const gameDesciption = 'Find the greatest common divisor of given numbers.\n';
-  const getData = () => {
-    const getMaxDivisor = (a, b) => {
-      if (a === b && a !== 0 && b !== 0) {
-        return a;
-      }
-      while (a !== b && a !== 0 && b !== 0) {
-        if (a > b) {
-          return getMaxDivisor(a - b, b);
-        }
-        return getMaxDivisor(a, b - a);
-      }
-      return a === 0 ? b : getMaxDivisor(b, a);
-    };
-    const num1 = randomNumber();
-    const num2 = randomNumber();
-    console.log(`Question: ${num1} ${num2}`);
-    return String(getMaxDivisor(num1, num2));
-  };
-  engine(gameDesciption, getData);
+const rule = 'Find the greatest common divisor of given numbers.';
+
+const getGcd = (value1, value2) => (
+  (value1 % value2) ? getGcd(value2, value1 % value2) : Math.abs(value2)
+);
+
+const makeRound = () => {
+  const value1 = generateRandomNumber(1, 100);
+  const value2 = generateRandomNumber(1, 100);
+  const question = `${value1} ${value2}`;
+  const answer = getGcd(value1, value2).toString();
+  return { question, answer };
 };
 
-export default gcd;
+export default () => makeGame(rule, makeRound);
