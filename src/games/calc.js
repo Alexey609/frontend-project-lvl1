@@ -1,28 +1,29 @@
-import engine from '..';
-import randomNumber from './randomnumber';
+import { generateRandomNumber } from '../utils';
+import makeGame from '..';
 
-const calc = () => {
-  const gameDesciption = 'What is the result of the expression?\n';
-  const getData = () => {
-    const num1 = randomNumber();
-    const num2 = randomNumber();
-    const listOfOperations = '+-*';
-    const operation = listOfOperations[Math.floor(Math.random() * listOfOperations.length)];
-    switch (operation) {
-      case '+':
-        console.log(`Question: ${num1} ${operation} ${num2}`);
-        return String(num1 + num2);
+const rule = 'What is the result of the expression?';
 
-      case '-':
-        console.log(`Question: ${num1} ${operation} ${num2}`);
-        return String(num1 - num2);
-
-      default:
-        console.log(`Question: ${num1} ${operation} ${num2}`);
-        return String(num1 * num2);
-    }
-  };
-  engine(gameDesciption, getData);
+const operators = ['+', '-', '*'];
+const getCalc = (value1, value2, operator) => {
+  switch (operator) {
+    case '+':
+      return value1 + value2;
+    case '-':
+      return value1 - value2;
+    case '*':
+      return value1 * value2;
+    default:
+      return null;
+  }
 };
 
-export default calc;
+const makeRound = () => {
+  const value1 = generateRandomNumber(1, 25);
+  const value2 = generateRandomNumber(1, 10);
+  const operator = operators[generateRandomNumber(0, operators.length - 1)];
+  const question = `${value1} ${operator} ${value2}`;
+  const answer = getCalc(value1, value2, operator).toString();
+  return { question, answer };
+};
+
+export default () => makeGame(rule, makeRound);
