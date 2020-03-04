@@ -3,22 +3,6 @@
 
 [![Build Status](https://travis-ci.org/Alexey609/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Alexey609/frontend-project-lvl1)
 
-https://asciinema.org/a/ma2Miz9zdX4sG2w0NIgk0MN5X
+https://asciinema.org/a/HiQSFI7ktwWDTQZSmts9l2s8w
 
-https://asciinema.org/a/e4Indkx4QbpapQX4kubAWDYJX
-
-https://asciinema.org/a/e4Iqwqxbir3VU0AbgSTCFSMhR
-
-https://asciinema.org/a/lZ3U4SXFPimW3e7RAVMR4KiX7
-
-https://asciinema.org/a/HAyZNNnfqM0vVpMlkd9kZ4g6X
-
-https://asciinema.org/a/oyDy2b5dzQ1DSG6A3NcetWoMT
-
-https://asciinema.org/a/pc7KOSGhD4RyAAoxoIzJ5T6T6
-
-https://asciinema.org/a/z2s9KsAXUoC4UZogL9GrUOAKw
-
-https://asciinema.org/a/Tzx6RvwtrlR85M5f1gN6hbhGY
-
-https://asciinema.org/a/4ENtni9SDubsoU34wu4xsqrow
+https://asciinema.org/a/rulTsAta5CvmIqMuwLpQo383K
