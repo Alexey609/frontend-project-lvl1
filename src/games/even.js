@@ -11,4 +11,4 @@ const generateRound = () => {
   return { question, answer };
 };
 
-export default () => playGame(rule, generateRound );
+export default () => playGame(rule, generateRound);
