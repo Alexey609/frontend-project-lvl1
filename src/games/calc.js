@@ -1,10 +1,10 @@
 import { generateRandomNumber } from '../utils';
-import makeGame from '..';
+import playGame from '..';
 
 const rule = 'What is the result of the expression?';
 
 const operators = ['+', '-', '*'];
-const getCalc = (value1, value2, operator) => {
+const calculate = (value1, value2, operator) => {
   switch (operator) {
     case '+':
       return value1 + value2;
@@ -22,8 +22,8 @@ const makeRound = () => {
   const value2 = generateRandomNumber(1, 10);
   const operator = operators[generateRandomNumber(0, operators.length - 1)];
   const question = `${value1} ${operator} ${value2}`;
-  const answer = getCalc(value1, value2, operator).toString();
+  const answer = calculate(value1, value2, operator).toString();
   return { question, answer };
 };
 
-export default () => makeGame(rule, makeRound);
+export default () => playGame(rule, makeRound);
