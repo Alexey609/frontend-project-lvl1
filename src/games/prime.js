@@ -1,5 +1,5 @@
 import { generateRandomNumber } from '../utils';
-import makeGame from '..';
+import playGame from '..';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -18,10 +18,10 @@ const isPrime = (value) => {
   return divider === 1;
 };
 
-const makeRound = () => {
+const generateRound = () => {
   const question = generateRandomNumber(1, 1000);
   const answer = isPrime(question) ? 'yes' : 'no';
   return { question, answer };
 };
 
-export default () => makeGame(rule, makeRound);
+export default () => playGame(rule, generateRound);
