@@ -1,5 +1,5 @@
 import { generateRandomNumber } from '../utils';
-import makeGame from '..';
+import playGame from '..';
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
@@ -15,4 +15,4 @@ const makeRound = () => {
   return { question, answer };
 };
 
-export default () => makeGame(rule, makeRound);
+export default () => playGame(rule, makeRound);
