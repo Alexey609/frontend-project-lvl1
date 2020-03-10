@@ -3,6 +3,16 @@
 
 [![Build Status](https://travis-ci.org/Alexey609/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Alexey609/frontend-project-lvl1)
 
+Приложение в виде 5 консольных мини игр.
+После установки npm для инсталяции запустите make install.
+
+This project consist of 5 console games.
+
+First, you need to install npm. Run make install in the project directory.
+Then generate build of the package running command make publish.
+
+After that you can install brain-games locally using npm link in the project directory.
+
 https://asciinema.org/a/HiQSFI7ktwWDTQZSmts9l2s8w
 
 https://asciinema.org/a/rulTsAta5CvmIqMuwLpQo383K
