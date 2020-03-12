@@ -6,5 +6,5 @@ const getAnswer = (data) => data.answer;
 export {
   generateRandomNumber,
   getQuestion,
-  getAnswer
+  getAnswer,
 };
