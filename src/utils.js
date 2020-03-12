@@ -9,4 +9,5 @@ export {
   generateRandomNumber,
   getQuestion,
   getAnswer,
+  makeData
 };
