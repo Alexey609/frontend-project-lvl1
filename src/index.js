@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getAnswer, getQuestion, makeData } from './utils';
+import { getAnswer, getQuestion } from './utils';
 
 const roundsCount = 3;
 const playGame = (rule, getGameData) => {
@@ -14,7 +14,6 @@ const playGame = (rule, getGameData) => {
     const gameData = getGameData();
     const question = getQuestion(gameData);
     const correctAnswer = getAnswer(gameData);
-    const result = makeData();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
