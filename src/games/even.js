@@ -1,6 +1,6 @@
-import { generateRandomNumber } from '../utils';
-import playGame from '..';
+import { generateRandomNumber } from '../utils';import { makeData } from '../utils';
 import { makeData } from '../utils';
+import playGame from '..';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
