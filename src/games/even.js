@@ -1,11 +1,13 @@
 import { generateRandomNumber } from '../utils';
 import playGame from '..';
+import { makeData } from '../utils';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (value) => value % 2 === 0;
 
 const generateRound = () => {
+  makeData();
   const question = generateRandomNumber(1, 100);
   const answer = isEven(question) ? 'yes' : 'no';
   return { question, answer };
