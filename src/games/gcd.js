@@ -1,4 +1,4 @@
-import { generateRandomNumber } from '../utils';
+import { generateRandomNumber, makeData } from '../utils';
 import playGame from '..';
 
 const rule = 'Find the greatest common divisor of given numbers.';
@@ -8,6 +8,7 @@ const getGcd = (value1, value2) => (
 );
 
 const makeRound = () => {
+  makeData();
   const value1 = generateRandomNumber(1, 100);
   const value2 = generateRandomNumber(1, 100);
   const question = `${value1} ${value2}`;
