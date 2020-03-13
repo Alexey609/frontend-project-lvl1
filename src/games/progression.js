@@ -1,4 +1,4 @@
-import { generateRandomNumber } from '../utils';
+import { generateRandomNumber, makeData } from '../utils';
 import playGame from '..';
 
 const rule = 'What number is missing in the progression?';
@@ -16,6 +16,7 @@ const progressLength = 10;
 const lastIndex = progressLength - 1;
 
 const generateRound = () => {
+  makeData();
   const hiddenValueIndex = generateRandomNumber(0, lastIndex);
   const start = generateRandomNumber(1, 100);
   const step = generateRandomNumber(1, 30);
