@@ -1,5 +1,6 @@
 import { generateRandomNumber } from '../utils';
 import playGame from '..';
+import { makeData } from '../utils';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
