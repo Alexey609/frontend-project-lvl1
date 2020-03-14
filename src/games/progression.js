@@ -16,14 +16,13 @@ const progressLength = 10;
 const lastIndex = progressLength - 1;
 
 const generateRound = () => {
-  makeData();
   const hiddenValueIndex = generateRandomNumber(0, lastIndex);
   const start = generateRandomNumber(1, 100);
   const step = generateRandomNumber(1, 30);
   const question = getQuestion(start, step, progressLength, hiddenValueIndex);
   const answer = (start + step * hiddenValueIndex).toString();
 
-  return { question, answer };
+  return makeData (question, answer);
 };
 
 export default () => playGame(rule, generateRound);
