@@ -21,7 +21,7 @@ const isPrime = (value) => {
 const generateRound = () => {
   const question = generateRandomNumber(1, 1000);
   const answer = isPrime(question) ? 'yes' : 'no';
-  return makeData (question,answer);
+  return makeData (question, answer);
 };
 
 export default () => playGame(rule, generateRound);
