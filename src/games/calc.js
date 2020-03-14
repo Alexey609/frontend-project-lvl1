@@ -23,7 +23,7 @@ const makeRound = () => {
   const operator = operators[generateRandomNumber(0, operators.length - 1)];
   const question = `${value1} ${operator} ${value2}`;
   const answer = calculate(value1, value2, operator).toString();
-  return makeData (question, answer);
+  return makeData (question,answer);
 };
 
 export default () => playGame(rule, makeRound);
