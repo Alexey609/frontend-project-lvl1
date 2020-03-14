@@ -19,10 +19,9 @@ const isPrime = (value) => {
 };
 
 const generateRound = () => {
-  makeData();
   const question = generateRandomNumber(1, 1000);
   const answer = isPrime(question) ? 'yes' : 'no';
-  return { question, answer };
+  return makeData (question, answer);
 };
 
 export default () => playGame(rule, generateRound);
