@@ -22,7 +22,7 @@ const generateRound = () => {
   const question = getQuestion(start, step, progressLength, hiddenValueIndex);
   const answer = (start + step * hiddenValueIndex).toString();
 
-  return makeData (question, answer);
+  return makeData (question,answer);
 };
 
 export default () => playGame(rule, generateRound);
