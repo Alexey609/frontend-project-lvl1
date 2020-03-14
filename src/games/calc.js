@@ -18,13 +18,12 @@ const calculate = (value1, value2, operator) => {
 };
 
 const makeRound = () => {
-  makeData();
   const value1 = generateRandomNumber(1, 25);
   const value2 = generateRandomNumber(1, 10);
   const operator = operators[generateRandomNumber(0, operators.length - 1)];
   const question = `${value1} ${operator} ${value2}`;
   const answer = calculate(value1, value2, operator).toString();
-  return { question, answer };
+  return makeData (question, answer);
 };
 
 export default () => playGame(rule, makeRound);
