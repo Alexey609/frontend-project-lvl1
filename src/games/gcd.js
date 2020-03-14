@@ -12,7 +12,7 @@ const makeRound = () => {
   const value2 = generateRandomNumber(1, 100);
   const question = `${value1} ${value2}`;
   const answer = getGcd(value1, value2).toString();
-  return makeData (question,answer);
+  return makeData (question, answer);
 };
 
 export default () => playGame(rule, makeRound);
