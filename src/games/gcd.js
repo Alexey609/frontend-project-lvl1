@@ -8,12 +8,11 @@ const getGcd = (value1, value2) => (
 );
 
 const makeRound = () => {
-  makeData();
   const value1 = generateRandomNumber(1, 100);
   const value2 = generateRandomNumber(1, 100);
   const question = `${value1} ${value2}`;
   const answer = getGcd(value1, value2).toString();
-  return { question, answer };
+  return makeData (question, answer);
 };
 
 export default () => playGame(rule, makeRound);
